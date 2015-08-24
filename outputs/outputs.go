@@ -54,6 +54,7 @@ const (
 	RedisOutput
 	ElasticsearchOutput
 	FileOutput
+	HTTPOutput
 )
 
 // Output names
@@ -62,6 +63,7 @@ var OutputNames = []string{
 	"redis",
 	"elasticsearch",
 	"file",
+	"http",
 }
 
 func (o OutputPlugin) String() string {

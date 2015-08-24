@@ -12,6 +12,7 @@ import (
 	"github.com/elastic/libbeat/outputs"
 	"github.com/elastic/libbeat/outputs/elasticsearch"
 	"github.com/elastic/libbeat/outputs/fileout"
+	"github.com/elastic/libbeat/outputs/http"
 	"github.com/elastic/libbeat/outputs/redis"
 	"github.com/nranchev/go-libGeoIP"
 )
@@ -50,6 +51,7 @@ var EnabledOutputPlugins map[outputs.OutputPlugin]outputs.OutputInterface = map[
 	outputs.RedisOutput:         new(redis.RedisOutput),
 	outputs.ElasticsearchOutput: new(elasticsearch.ElasticsearchOutput),
 	outputs.FileOutput:          new(fileout.FileOutput),
+	outputs.HTTPOutput:          new(http.HTTPOutput),
 }
 
 func PrintPublishEvent(event common.MapStr) {
